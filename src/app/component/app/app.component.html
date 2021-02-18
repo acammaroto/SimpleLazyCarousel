@@ -1,0 +1,9 @@
+<div class="container- fluid">
+
+  <carousel [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="singleSlideOffset" [noWrap]="noWrap"
+    (activeSlideChange)='gotChange($event)' [showIndicators]='false' [interval]='false' [isAnimated]="true">
+    <slide *ngFor="let img of carouselImages; let idx = index">
+      <img src="{{img}}" alt="slide {{idx}}" style="width: 100%; height:100%; ">
+    </slide>
+  </carousel>
+</div>
